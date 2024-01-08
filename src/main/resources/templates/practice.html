@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <button>보내기</button>
+
+</body>
+</html>
+<script>
+    const btn = document.querySelector('button');
+    const div = document.querySelector('div');
+
+    btn.onclick = () => {
+        fetch("/message")
+            .then(response => { return response.text() })
+            .then(value => {
+                document.body.insertAdjacentHTML(`beforeend` , `<div>${value}</div>`)
+            })
+    }
+
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text">
+    <button>클릭해봐!</button>
+
+
+    <form action="/input/1">
+        <button>ㄱㄱ</button>
+    </form>
+</body>
+</html>
+<script>
+    const input = document.querySelector('input');
+    const btn = document.querySelector('button');
+    btn.onclick = () => {
+        fetch(`/input?number=${input.value}`)
+            .then((response) => {
+                return response.text()
+            })
+            .then(data => {
+                document.body.insertAdjacentHTML(`beforeend`, `<div>${data}</div>`)
+            });
+    }
+</script>
