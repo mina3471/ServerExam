@@ -11,7 +11,7 @@ class PracticeApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println(restService.select(1, 2));
+        System.out.println(restService.select("영어"));
     }
 
 }

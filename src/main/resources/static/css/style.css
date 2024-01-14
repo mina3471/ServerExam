@@ -1,0 +1,22 @@
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#storeInfo {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#storeInfo h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+#storeInfo p {
+    color: #666;
+    font-size: 18px;
+}
