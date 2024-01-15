@@ -16,18 +16,10 @@ public class RestController {
     private RestService restService;
 
 
+    //required = false는 파라미터가 필수아님 URL에 language 파라미터가 없더라도 select 메소드는 실행
     @ResponseBody
     @GetMapping("/index")
-    public ArrayList<Map> select(@RequestParam(required = false, name = "language") String language){
-//        if(language.equals("all") || language.equals("한국어")){
-//            language = "";
-//        }
-       return restService.select(language);
+    public ArrayList<Map> select(@RequestParam(required = false, name = "language") String language) {
+        return restService.select(language);
     }
-//
-//    @ResponseBody
-//    @PostMapping("/insert")
-//    public void insert(@RequestBody List<RestDTO> restDTOS){
-//       restService.insert(restDTOS);
-//    }
 }
